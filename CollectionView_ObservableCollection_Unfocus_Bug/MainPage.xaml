@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+						 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+						 x:Class="COUB.MainPage">
+
+	<Grid RowDefinitions="Auto,*" Padding="20,40">
+
+		<!--Unfocuses on enter letter-->
+
+		<CollectionView Grid.Row="1" ItemsSource="{Binding Items}">
+			<CollectionView.Header>
+				<Entry x:Name="EntrySearch" TextChanged="EntrySearch_TextChanged" Margin="5"  Unfocused="EntrySearch_Unfocused" />
+			</CollectionView.Header>
+		</CollectionView>
+
+		<!--Doesnt unfocus-->
+
+		<!--<ListView Grid.Row="1" ItemsSource="{Binding Items}">
+			<ListView.Header>
+				<Entry x:Name="EntrySearch" TextChanged="EntrySearch_TextChanged" Margin="5"  Unfocused="EntrySearch_Unfocused" />
+			</ListView.Header>
+		</ListView>-->
+	</Grid>
+</ContentPage>
