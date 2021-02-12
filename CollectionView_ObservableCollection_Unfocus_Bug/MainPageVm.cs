@@ -13,16 +13,6 @@ namespace COUB
         public MainPageVm()
         {
             Items = new ObservableRangeCollection<string>(_allItems);
-
-            // Just adding items to the list is not a problem. It seems that is has to be a "reset"
-            //Task.Run(async () =>
-            //{
-            //    while (true)
-            //    {
-            //        await Task.Delay(8000);
-            //        Device.BeginInvokeOnMainThread(() => Items.Add("ABCDEF"));
-            //    }
-            //});
         }
 
         public Command SearchCommand => new Command((obj) =>
